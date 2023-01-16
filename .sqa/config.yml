@@ -1,0 +1,66 @@
+config:
+  credentials: []
+  project_repos:
+    git.man.poznan.pl/stash/scm/eosc-rs/online-ml-ai-engine:
+      branch: master
+      repo: https://git.man.poznan.pl/stash/scm/eosc-rs/online-ml-ai-engine.git
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: release/1.7.7
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      git.man.poznan.pl/stash/scm/eosc-rs/online-ml-ai-engine git:
+        commands:
+        - /usr/bin/env sh .sqa/script.sleazy-sangria-burmese.sh
+        container: qc.acc_dorky-cinnamon-angelfish
+  QC.Doc:
+    repos:
+      git.man.poznan.pl/stash/scm/eosc-rs/online-ml-ai-engine find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.ready-indigo-rottweiler.sh
+        container: qc.doc_cloudy-charcoal-lionfish
+      git.man.poznan.pl/stash/scm/eosc-rs/online-ml-ai-engine git:
+        commands:
+        - /usr/bin/env sh .sqa/script.squeaky-alizarin-vole.sh
+        container: qc.doc_thirsty-lime-barb
+      git.man.poznan.pl/stash/scm/eosc-rs/online-ml-ai-engine markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.hasty-charcoal-lemur.sh
+        container: qc.doc_greasy-periwinkle-horse
+  QC.Lic:
+    repos:
+      git.man.poznan.pl/stash/scm/eosc-rs/online-ml-ai-engine licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.bumpy-lemon-insect.sh
+        container: qc.lic_crappy-vermilion-crab
+  QC.Sec:
+    repos:
+      git.man.poznan.pl/stash/scm/eosc-rs/online-ml-ai-engine bandit:
+        commands:
+        - /usr/bin/env sh .sqa/script.hazy-gamboge-forest.sh
+        container: qc.sec_gimpy-thistle-pig
+  QC.Sty:
+    repos:
+      git.man.poznan.pl/stash/scm/eosc-rs/online-ml-ai-engine flake8:
+        commands:
+        - /usr/bin/env sh .sqa/script.gummy-sepia-uguisu.sh
+        container: qc.sty_leaky-apricot-sloth
+      git.man.poznan.pl/stash/scm/eosc-rs/online-ml-ai-engine hadolint:
+        commands:
+        - /usr/bin/env sh .sqa/script.wiggy-auburn-worm.sh
+        container: qc.sty_wiggy-cyan-birman
+      git.man.poznan.pl/stash/scm/eosc-rs/online-ml-ai-engine jsonlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.tacky-thistle-heron.sh
+        container: qc.sty_sickly-celadon-bird
+  QC.Ver:
+    repos:
+      git.man.poznan.pl/stash/scm/eosc-rs/online-ml-ai-engine get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.seedy-periwinkle-fly.sh
+        container: qc.ver_stinky-taupe-nightingale
+timeout: 5400
