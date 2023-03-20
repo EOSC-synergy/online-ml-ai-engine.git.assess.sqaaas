@@ -15,58 +15,58 @@ sqa_criteria:
     repos:
       git.man.poznan.pl/stash/scm/eosc-rs/online-ml-ai-engine git:
         commands:
-        - /usr/bin/env sh .sqa/script.stinky-taupe-booby.sh
-        container: qc.acc_geeky-purple-dane
+        - /usr/bin/env sh .sqa/script.wheezy-chestnut-koala.sh
+        container: qc.acc_hilly-harlequin-rattlesnake
   QC.Doc:
     repos:
       git.man.poznan.pl/stash/scm/eosc-rs/online-ml-ai-engine find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.trippy-cardinal-bear.sh
-        container: qc.doc_shabby-aqua-crocodile
+        - /usr/bin/env sh .sqa/script.blurry-beige-sheepdog.sh
+        container: qc.doc_blurry-scarlet-butterfly
       git.man.poznan.pl/stash/scm/eosc-rs/online-ml-ai-engine git:
         commands:
-        - /usr/bin/env sh .sqa/script.skimpy-beige-sponge.sh
-        container: qc.doc_fuzzy-sepia-bracke
+        - /usr/bin/env sh .sqa/script.gimpy-apricot-frise.sh
+        container: qc.doc_wiggy-coral-caiman
       git.man.poznan.pl/stash/scm/eosc-rs/online-ml-ai-engine markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.homely-saffron-deer.sh
-        container: qc.doc_gummy-magnolia-tetra
+        - /usr/bin/env sh .sqa/script.ugly-charcoal-barracuda.sh
+        container: qc.doc_fuzzy-corn-vole
   QC.Lic:
     repos:
       git.man.poznan.pl/stash/scm/eosc-rs/online-ml-ai-engine licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.tacky-brass-markhor.sh
-        container: qc.lic_baggy-yellow-stoat
+        - /usr/bin/env sh .sqa/script.jumpy-bistre-warthog.sh
+        container: qc.lic_muggy-sepia-bear
   QC.Met:
     repos:
       git.man.poznan.pl/stash/scm/eosc-rs/online-ml-ai-engine cff-converter-python:
         commands:
-        - /usr/bin/env sh .sqa/script.snazzy-chocolate-dalmatian.sh
-        container: qc.met_bumpy-zucchini-drever
+        - /usr/bin/env sh .sqa/script.zippy-cinnabar-boar.sh
+        container: qc.met_flimsy-cornflower-argentino
   QC.Sec:
     repos:
       git.man.poznan.pl/stash/scm/eosc-rs/online-ml-ai-engine bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.zippy-denim-dunker.sh
-        container: qc.sec_randy-orange-caracal
+        - /usr/bin/env sh .sqa/script.goopy-cyan-cuscus.sh
+        container: qc.sec_geeky-aqua-akbash
   QC.Sty:
     repos:
       git.man.poznan.pl/stash/scm/eosc-rs/online-ml-ai-engine flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.freaky-linen-pig.sh
-        container: qc.sty_cranky-asparagus-dragon
+        - /usr/bin/env sh .sqa/script.paltry-lime-wolf.sh
+        container: qc.sty_leaky-goldenrod-fossa
       git.man.poznan.pl/stash/scm/eosc-rs/online-ml-ai-engine hadolint:
         commands:
-        - /usr/bin/env sh .sqa/script.ready-harlequin-lemur.sh
-        container: qc.sty_thirsty-ruby-butterfly
+        - /usr/bin/env sh .sqa/script.sloppy-orange-cuscus.sh
+        container: qc.sty_bumpy-ivory-rabbit
       git.man.poznan.pl/stash/scm/eosc-rs/online-ml-ai-engine jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.snazzy-scarlet-baboon.sh
-        container: qc.sty_sickly-champagne-meerkat
+        - /usr/bin/env sh .sqa/script.nerdy-firebrick-donkey.sh
+        container: qc.sty_nippy-buff-millipede
   QC.Ver:
     repos:
       git.man.poznan.pl/stash/scm/eosc-rs/online-ml-ai-engine get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.sickly-khaki-hyrax.sh
-        container: qc.ver_dorky-celadon-cow
+        - /usr/bin/env sh .sqa/script.gimpy-saffron-drever.sh
+        container: qc.ver_droopy-pumpkin-pinscher
 timeout: 5400
